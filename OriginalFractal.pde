@@ -13,16 +13,16 @@ public void draw(){
   fractal(100, 300, 150);
 }
 
-public void fractal(int x, int y, int size){
-  if(size<50){
+public void fractal(int x, int y, int r){
+  if(r<50){
     noStroke();
     fill(x/30, x/2, x-50);
-    circle(x, y, size);
+    ellipse(x, y, r, r);
   }
   else{
     noStroke();
     fill(x/30, x/2, x-50);
-    circle(x, y, size);
-    fractal(x-30, y-30, size-40);
+    ellipse(x, y, r, r);
+    fractal(x-30, y-30, r-40);
   }
 }
